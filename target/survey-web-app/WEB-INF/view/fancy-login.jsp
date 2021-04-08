@@ -1,12 +1,13 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 
 <!doctype html>
 <html lang="en">
 
 <head>
 	
-	<title>Login Page</title>
+	<title>Logowanie</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
@@ -30,7 +31,7 @@
 			<div class="panel panel-info">
 
 				<div class="panel-heading">
-					<div class="panel-title">Sign In</div>
+					<div class="panel-title">Zaloguj się</div>
 				</div>
 
 				<div style="padding-top: 30px" class="panel-body">
@@ -49,7 +50,7 @@
 									<c:if test="${param.error != null}">
 										
 										<div class="alert alert-danger col-xs-offset-1 col-xs-10">
-											Invalid username and password.
+											Nieprawidłowy login lub hasło.
 										</div>
 		
 									</c:if>
@@ -59,7 +60,7 @@
 									<c:if test="${param.logout != null}">
 										            
 										<div class="alert alert-success col-xs-offset-1 col-xs-10">
-											You have been logged out.
+											Zostałeś wylogowany.
 										</div>
 								    
 									</c:if>
@@ -85,7 +86,7 @@
 						<!-- Login/Submit Button -->
 						<div style="margin-top: 10px" class="form-group">						
 							<div class="col-sm-6 controls">
-								<button type="submit" class="btn btn-success">Login</button>
+								<button type="submit" class="btn btn-success">Zaloguj</button>
 							</div>
 						</div>
 
@@ -102,7 +103,7 @@
 			</div>
 
 			<div>
-				<a href="${pageContext.request.contextPath}/register/showRegistrationForm" class="btn btn-primary" role="button" aria-pressed="true">Register New User</a>
+				<a href="${pageContext.request.contextPath}/register/showRegistrationForm" class="btn btn-primary" role="button" aria-pressed="true">Rejestracja</a>
 			</div>
 
 		</div>

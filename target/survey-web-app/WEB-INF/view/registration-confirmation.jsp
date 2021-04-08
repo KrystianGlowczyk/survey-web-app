@@ -1,16 +1,17 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <html>
 
 <head>
-	<title>Registration Confirmation</title>
+	<title>Potwierdzenie Rejestracji</title>
 </head>
 
 <body>
 
-	<h2>User registered successfully!</h2>
+	<h2>Użytkownik zarejestrowany!</h2>
 
 	<hr>
 	
-	<a href="${pageContext.request.contextPath}/showMyLoginPage">Login with new user</a>
+	<a href="${pageContext.request.contextPath}/showMyLoginPage">Zaloguj się!</a>
 	
 </body>
 

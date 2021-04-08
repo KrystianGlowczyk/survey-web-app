@@ -1,24 +1,25 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <html>
 
 <head>
-	<title>luv2code SYSTEMS Home Page</title>
+	<title>Panel Administratora</title>
 </head>
 
 <body>
 
-<h2>luv2code SYSTEMS Home Page</h2>
+<h2>Panel Administratora</h2>
 
 <hr>
 
 <p>
-	We have our annual holiday Caribbean cruise coming up. Register now!
+	pusto
 	<br>
-	Keep this trip a secret, don't tell the regular employees LOL :-)
+	:-)
 </p>
 
 <hr>
 
-<a href="${pageContext.request.contextPath}/">Back to Home Page</a>
+<a href="${pageContext.request.contextPath}/">Powrót do strony głównej</a>
 
 </body>
 

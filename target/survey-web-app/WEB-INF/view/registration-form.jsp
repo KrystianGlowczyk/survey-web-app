@@ -1,12 +1,13 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%> 
 
 <!doctype html>
 <html lang="en">
 
 <head>
 	
-	<title>Register New User Form</title>
+	<title>Rejestracja</title>
 	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,7 +36,7 @@
 			<div class="panel panel-primary">
 
 				<div class="panel-heading">
-					<div class="panel-title">Register New User</div>
+					<div class="panel-title">Rejestracja nowego użytkownika</div>
 				</div>
 
 				<div style="padding-top: 30px" class="panel-body">
