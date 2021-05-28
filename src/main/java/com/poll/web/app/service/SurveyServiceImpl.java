@@ -24,7 +24,7 @@ public class SurveyServiceImpl implements SurveyService {
 
 	@Override
 	@Transactional
-	public Survey getSurveyById(Long id) {
+	public Survey getSurveyById(int id) {
 		
 		return surveyDao.getSurveyById(id);
 	}
@@ -38,7 +38,7 @@ public class SurveyServiceImpl implements SurveyService {
 
 	@Override
 	@Transactional
-	public void deleteSurvey(Long id) {
+	public void deleteSurvey(int id) {
 		surveyDao.deleteSurvey(id);
 
 	}

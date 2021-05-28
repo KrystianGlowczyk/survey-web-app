@@ -42,7 +42,7 @@ public class SurveyDaoImpl implements SurveyDao {
 	}
 
 	@Override
-	public Survey getSurveyById(Long id) {
+	public Survey getSurveyById(int id) {
 		// get current hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
 
@@ -54,7 +54,7 @@ public class SurveyDaoImpl implements SurveyDao {
 	}
 
 	@Override
-	public void deleteSurvey(Long id) {
+	public void deleteSurvey(int id) {
 		// get current hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
 

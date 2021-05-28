@@ -5,14 +5,22 @@
 
 <html>
 <head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 <title>Lista Ankiet</title>
 
 </head>
+
 <body>
+<div class="container">
 	<h2>Lista Ankiet:</h2>
 
-	<table>
+	<table class="table table-bordered table-striped">
+		<thead class="thead-dark">
 		<tr>
 			<th>Id</th>
 			<th>Tytuł</th>
@@ -21,6 +29,7 @@
 			<th>Dodaj pytanie</th>
 			<th>Wyświetl pytania</th>
 		</tr>
+		</thead>
 
 		<c:forEach var="tempSurvey" items="${surveys}">
 
@@ -44,11 +53,15 @@
 			<tr>
 				<td>${tempSurvey.id}</td>
 				<td>${tempSurvey.title}</td>
-				<td><a href="${updateLink}">Edytuj</a></td>
+				<td><a href="${updateLink}"
+					   class="btn btn-outline-secondary">Edytuj</a></td>
 				<td><a href="${deleteLink}"
+					   class="btn btn-outline-danger"
 					onclick="if (!(confirm('Serio?'))) return false">Usuń</a></td>
-				<td><a href="${addQuestion}">Dodaj pytanie</a></td>
-				<td><a href="${showQuestions}">Wyswietl pytania</a>
+				<td><a href="${addQuestion}"
+					   class="btn btn-outline-success ">Dodaj pytanie</a></td>
+				<td><a href="${showQuestions}"
+					   class="btn btn-outline-info ">Wyswietl pytania</a>
 			</tr>
 
 		</c:forEach>
@@ -57,10 +70,11 @@
 
 	<hr>
 
-	<a href="${pageContext.request.contextPath}/">Powrót do strony
+	<a href="${pageContext.request.contextPath}/"
+	   class="btn btn-secondary btn-sm ">Powrót do strony
 		głównej</a>
 
-
+<hr>
 
 	<form:form action="${pageContext.request.contextPath}/logout"
 		method="POST">
@@ -68,6 +82,6 @@
 		<input type="submit" value="Logout" />
 
 	</form:form>
-
+</div>
 </body>
 </html>

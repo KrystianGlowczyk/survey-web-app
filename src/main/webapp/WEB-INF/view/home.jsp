@@ -4,10 +4,18 @@
 <html>
 
 <head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
 	<title>Aplikacja do ankietowania</title>
 </head>
 
 <body>
+<div class="container">
 	<h2>Strona Główna</h2>
 	<hr>
 	
@@ -27,8 +35,8 @@
 	</p>
 	
 	<p>
-		<a href="${pageContext.request.contextPath}/survey/addSurvey">Dodaj ankiete</a>
-		<a href="${pageContext.request.contextPath}/survey/list">Wyświetl ankiety</a>
+		<a href="${pageContext.request.contextPath}/survey/addSurvey" class="btn btn-outline-success ">Dodaj ankiete</a>
+		<a href="${pageContext.request.contextPath}/survey/list" class="btn btn-outline-info ">Wyświetl ankiety</a>
 	</p>	
 	
 	
@@ -37,7 +45,7 @@
 		<!-- Add a link to point to /systems ... this is for the admins -->
 		
 		<p>
-			<a href="${pageContext.request.contextPath}/systems/showUsers">Panel Administratora</a>
+			<a href="${pageContext.request.contextPath}/systems/showUsers" class="btn btn-outline-warning">Panel Administratora</a>
 			(Only for Admin peeps)
 		</p>
 	
@@ -53,7 +61,7 @@
 		<input type="submit" value="Logout" />
 	
 	</form:form>
-	
+</div>
 </body>
 
 </html>

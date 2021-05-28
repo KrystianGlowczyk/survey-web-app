@@ -6,12 +6,12 @@ import com.poll.web.app.entity.Question;
 
 public interface QuestionDao {
 
-	List<Question> getQuestions(Long id);
+	List<Question> getQuestions(int id);
 
-	Question getQuestionById(Long id);
+	Question getQuestionById(int id);
 
-	void saveQuestion(Question question, Long surveyId);
+	void saveQuestion(Question question, int surveyId);
 
-	void deleteQuestion(Long id);
+	void deleteQuestion(int id);
 
 }

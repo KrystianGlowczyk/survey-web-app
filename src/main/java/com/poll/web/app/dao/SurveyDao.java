@@ -8,10 +8,10 @@ public interface SurveyDao {
 	
 	public List<Survey> getSurveys();
 	
-	public Survey getSurveyById(Long id);
+	public Survey getSurveyById(int id);
 	
 	public void saveSurvey(Survey survey);
 	
-	public void deleteSurvey(Long id);
+	public void deleteSurvey(int id);
 
 }

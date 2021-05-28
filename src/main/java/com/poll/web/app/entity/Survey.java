@@ -19,7 +19,7 @@ public class Survey {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	private Long id;
+	private int id;
 	
 	@Column(name = "title")
 	private String title;
@@ -42,11 +42,11 @@ public class Survey {
 		this.questions = questions;
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

@@ -18,7 +18,7 @@ public class QuestionDaoImpl implements QuestionDao {
 	public SessionFactory sessionFactory;
 
 	@Override
-	public List<Question> getQuestions(Long id) {
+	public List<Question> getQuestions(int id) {
 		Session currentSession = sessionFactory.getCurrentSession();
 
 		Query<Question> theQuery = currentSession.createQuery("from Question where survey_id=:theId", Question.class);
@@ -29,7 +29,7 @@ public class QuestionDaoImpl implements QuestionDao {
 	}
 
 	@Override
-	public Question getQuestionById(Long id) {
+	public Question getQuestionById(int id) {
 		Session currentSession = sessionFactory.getCurrentSession();
 
 		Question question = null;
@@ -40,7 +40,7 @@ public class QuestionDaoImpl implements QuestionDao {
 	}
 
 	@Override
-	public void saveQuestion(Question question, Long surveyId) {
+	public void saveQuestion(Question question, int surveyId) {
 		Session currentSession = sessionFactory.getCurrentSession();
 		Survey survey = currentSession.get(Survey.class, surveyId);
 		question.setSurvey(survey);
@@ -49,7 +49,7 @@ public class QuestionDaoImpl implements QuestionDao {
 	}
 
 	@Override
-	public void deleteQuestion(Long id) {
+	public void deleteQuestion(int id) {
 		Session currentSession = sessionFactory.getCurrentSession();
 
 		Query<Question> theQuery = currentSession.createQuery("delete from Question where id=:questionId",Question.class);

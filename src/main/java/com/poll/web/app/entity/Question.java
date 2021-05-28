@@ -1,15 +1,7 @@
 package com.poll.web.app.entity;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "question")
@@ -18,7 +10,7 @@ public class Question {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	private Long id;
+	private int id;
 	
 	@Column(name = "title")
 	private String title;
@@ -30,6 +22,21 @@ public class Question {
 	@JoinColumn(name = "survey_id")
 	private Survey survey;
 
+	@OneToMany(mappedBy = "question",fetch = FetchType.EAGER, cascade = CascadeType.ALL,orphanRemoval = true)
+	private Set<Answer> answers;
+
+	public Question(String title, String type, Survey survey, Set<Answer> answers) {
+		this.title = title;
+		this.type = type;
+		this.survey = survey;
+		this.answers = answers;
+	}
+
+	public Question(String title, Set<Answer> answers) {
+		this.title = title;
+		this.answers = answers;
+	}
+
 	public Question(String title, String type, Survey survey) {
 		super();
 		this.title = title;
@@ -37,18 +44,25 @@ public class Question {
 		this.survey = survey;
 	}
 
-	
+	public Set<Answer> getAnswers() {
+		return answers;
+	}
+
+	public void setAnswers(Set<Answer> answers) {
+		this.answers = answers;
+	}
+
 	public Question() {
 		// TODO Auto-generated constructor stub
 	}
 
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

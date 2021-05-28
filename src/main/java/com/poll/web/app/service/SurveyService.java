@@ -9,10 +9,10 @@ public interface SurveyService {
 
 	List<Survey> getSurveys();
 
-	Survey getSurveyById(Long id);
+	Survey getSurveyById(int id);
 
 	void saveSurvey(Survey survey);
 
-	void deleteSurvey(Long id);
+	void deleteSurvey(int id);
 
 }
