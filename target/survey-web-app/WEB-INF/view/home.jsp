@@ -28,7 +28,7 @@
 	
 	<p>
 		<a href="${pageContext.request.contextPath}/survey/addSurvey">Dodaj ankiete</a>
-		<a href="${pageContext.request.contextPath}/survey/show-survey">Wyświetl ankiety</a>
+		<a href="${pageContext.request.contextPath}/survey/list">Wyświetl ankiety</a>
 	</p>	
 	
 	

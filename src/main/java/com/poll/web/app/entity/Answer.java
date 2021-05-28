@@ -14,58 +14,56 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "answer")
 public class Answer {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
-	private Long id;
-	
-	@Column(name= "title")
-	private String title;
-	
-	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name = "question_id")
-	private Question question;
-	
-	public Answer() {
-		// TODO Auto-generated constructor stub
-	}
 
-	public Answer(String title) {
-		super();
-		this.title = title;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
 
-	public Answer(String title, Question question) {
-		super();
-		this.title = title;
-		this.question = question;
-	}
+    @Column(name = "title")
+    private String title;
 
-	public Long getId() {
-		return id;
-	}
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "question_id")
+    private Question question;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public Answer() {
+        // TODO Auto-generated constructor stub
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public Answer(String title) {
+        this.title = title;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public Answer(String title, Question question) {
+        super();
+        this.title = title;
+        this.question = question;
+    }
 
-	public Question getQuestion() {
-		return question;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public void setQuestion(Question question) {
-		this.question = question;
-	}
-	
-	
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Question getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(Question question) {
+        this.question = question;
+    }
+
 
 }

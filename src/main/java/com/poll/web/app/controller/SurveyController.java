@@ -49,7 +49,7 @@ public class SurveyController {
 	}
 	
 	@GetMapping("/showFormForUpdate")
-	public String showFormForUpdate(@RequestParam("surveyId")Long theId, Model theModel) {
+	public String showFormForUpdate(@RequestParam("surveyId") Long theId, Model theModel) {
 		
 		Survey theSurvey = surveyService.getSurveyById(theId);
 		
@@ -59,7 +59,7 @@ public class SurveyController {
 	}
 	
 	@GetMapping("/delete")
-	public String deleteSurvey(@RequestParam("surveyId")Long id) {
+	public String deleteSurvey(@RequestParam("surveyId") Long id) {
 		
 		surveyService.deleteSurvey(id);
 		
